@@ -1,4 +1,5 @@
 import BrandSlide from "@/components/BrandSlide";
+import CTA from "@/components/CTA";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
@@ -16,6 +17,7 @@ export default function Home() {
       <ProductCard/>
       <Pricing/>
       <Testimonials/>
+      <CTA/>
     </div>
   );
 }
