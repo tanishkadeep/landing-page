@@ -10,7 +10,7 @@ const Hero = () => {
     <section className="p-8 pb-16 md:p-10 lg:p-20 font-medium bg-gradient-to-tr from-[#001E80] via-[#e4eaff]  overflow-x-clip md:items-center gap-3">
       <div className="md:flex items-center justify-center gap-16">
         <div className="md:w-[478px]">
-          <div className="border-2 w-fit p-0.5 px-1 lg:text-lg rounded-lg border-slate-300/80">
+          <div className="border-2 w-fit p-0.5 px-1 lg:text-lg rounded-lg border-slate-400/80">
             Version 2.0 is here
           </div>
           <div className="text-5xl md:text-7xl font-black my-7 bg-gradient-to-b from-black to-[#002499] text-transparent bg-clip-text tracking-tighter">
@@ -23,7 +23,7 @@ const Hero = () => {
 
           <div className="flex items-center gap-3 mt-6 text-lg">
             <Button text="Get for free" />
-            <div>
+            <div className="cursor-pointer hover:underline">
               Learn more
               <FaArrowRight className="h-3 w-3 inline ml-2" />
             </div>
