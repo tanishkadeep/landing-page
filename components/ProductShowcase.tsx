@@ -65,7 +65,7 @@ const ProductShowcase = () => {
           <MdLockOutline className="text-2xl mb-3" />
           <div className="font-bold text-2xl">Secure data encryption</div>
           <div className="text-lg my-2">
-            Ensure your data's safety with top-tier encryption.
+            Ensure data safety with top-tier encryption.
           </div>
           <div className="text-lg font-medium">
             Learn more <FaArrowRight className="inline h-3 w-3" />
