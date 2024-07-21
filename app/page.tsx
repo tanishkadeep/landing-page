@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
 import ProductCard from "@/components/ProductCard";
 import ProductShowcase from "@/components/ProductShowcase";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ProductShowcase/>
       <ProductCard/>
       <Pricing/>
+      <Testimonials/>
     </div>
   );
 }
