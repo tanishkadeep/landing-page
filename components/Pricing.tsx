@@ -50,7 +50,7 @@ const Pricing = () => {
           </div>
         </div>
 
-        <div className="shadow-xl border-gray-100 border-2 rounded-2xl p-8 bg-black text-white">
+        <div className="shadow-2xl border-2 rounded-2xl p-8 bg-black text-white">
           <div className="flex justify-between items-center">
             <div className="font-bold text-gray-500">Pro</div>
             <div className="border-2 w-fit p-0.5 px-3 text-xs rounded-xl border-slate-300/20 bg-gradient-to-r from-pink-500  via-lime-600 to-sky-400 text-transparent bg-clip-text font-bold tracking-tighter">
