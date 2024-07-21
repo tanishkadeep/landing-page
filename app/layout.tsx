@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { FaArrowRight } from "react-icons/fa";
+import { twMerge } from "tailwind-merge";
 
-const inter = Inter({ subsets: ["latin"] });
+const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Landing Page",
@@ -17,8 +18,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="bg-black text-white p-3 text-xs text-center">
+      <body className={twMerge(dmSans.className, "antialiased bg-[#EAEEFE]")}>
+        <div className="bg-black text-white p-3 text-sm text-center">
           <span className="hidden sm:inline pr-2 opacity-80">
             Streamline your workflow and boost your productivity.
           </span>
