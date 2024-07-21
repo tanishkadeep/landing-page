@@ -9,7 +9,7 @@ const Header = () => {
       <Image src={Logo} alt="Logo" />
       <FaBars className="block md:hidden" />
       <nav className="hidden md:block">
-        <ul className="flex gap-6 items-center text-gray-600">
+        <ul className="flex gap-6 items-center">
           <li>
             <a href="#">About</a>
           </li>
