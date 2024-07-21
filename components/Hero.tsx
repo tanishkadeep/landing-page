@@ -7,7 +7,7 @@ import HalfTorus from "@/public/assests/half-torus.png";
 
 const Hero = () => {
   return (
-    <section className="px-8 py-12 md:p-10 lg:p-20 font-medium bg-gradient-to-tr from-[#001E80] via-[#e4eaff]  overflow-x-clip md:items-center gap-3">
+    <section className="p-8 pb-16 md:p-10 lg:p-20 font-medium bg-gradient-to-tr from-[#001E80] via-[#e4eaff]  overflow-x-clip md:items-center gap-3">
       <div className="md:flex items-center justify-center gap-16">
         <div className="md:w-[478px]">
           <div className="border-2 w-fit p-0.5 px-1 lg:text-lg rounded-lg border-slate-300/80">
