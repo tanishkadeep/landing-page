@@ -14,7 +14,7 @@ const ProductShowcase = () => {
         <div className="border-2 w-fit p-0.5 px-3 text-sm rounded-xl border-slate-300/80">
           Boost your productivity
         </div>
-        <div className="text-3xl md:text-4xl lg:text-5xl mt-6 mb-5 font-bold tracking-tighter text-center">
+        <div className="text-3xl md:text-4xl lg:text-5xl py-6 font-bold tracking-tighter text-center bg-gradient-to-b from-black to-[#002499] text-transparent bg-clip-text">
           A more effective way to track progress
         </div>
 
