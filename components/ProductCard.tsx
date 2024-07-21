@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const ProductCard = () => {
   return (
-    <div className="bg-white pb-28 flex flex-col items-center">
+    <div className="pb-28 flex flex-col items-center">
       <div className="flex flex-col items-center justify-center pt-28 px-12 pb-10 md:w-[600px]">
         <div className="border-2 w-fit p-0.5 px-3 text-sm rounded-xl border-slate-300/80">
           Everything you need
