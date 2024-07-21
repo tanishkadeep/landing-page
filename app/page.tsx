@@ -1,6 +1,7 @@
 import BrandSlide from "@/components/BrandSlide";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import ProductCard from "@/components/ProductCard";
 import ProductShowcase from "@/components/ProductShowcase";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero/>
       <BrandSlide/>
       <ProductShowcase/>
+      <ProductCard/>
     </div>
   );
 }
