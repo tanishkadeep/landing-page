@@ -1,13 +1,19 @@
+"use client";
+
 import { FaArrowRight } from "react-icons/fa";
 import Button from "./Button";
 import Image from "next/image";
 import HeroImage from "@/public/assests/Visual.png";
 import Cylinder from "@/public/assests/cylinder.png";
 import HalfTorus from "@/public/assests/half-torus.png";
+import { motion } from "framer-motion";
 
 const Hero = () => {
+  
   return (
-    <section className="p-8 pb-16 md:p-10 lg:p-20 font-medium bg-gradient-to-tr from-[#001E80] via-[#e4eaff]  overflow-x-clip md:items-center gap-3">
+    <section
+      className="p-8 pb-16 md:p-10 lg:p-20 font-medium bg-gradient-to-tr from-[#001E80] via-[#e4eaff]  overflow-x-clip md:items-center gap-3"
+    >
       <div className="md:flex items-center justify-center gap-16">
         <div className="md:w-[478px]">
           <div className="border-2 w-fit p-0.5 px-1 lg:text-lg rounded-lg border-slate-400/80">
@@ -35,16 +41,27 @@ const Hero = () => {
             src={Cylinder}
             alt="Cylinder"
             className=" hidden md:block md:absolute -left-8 -top-8"
+           
           />
-          <Image
-            src={HeroImage}
+          <motion.img
+            src={HeroImage.src}
             alt="Hero Image"
             className="md:absolute md:h-full md:w-auto md:max-w-none"
+            animate={{
+              translateY: [-30, 30],
+            }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "mirror",
+              duration: 3,
+              ease: "easeInOut",
+            }}
           />
           <Image
             src={HalfTorus}
             alt="HalfTorus"
             className=" hidden lg:block md:absolute left-[400px] top-[500px]"
+          
           />
         </div>
       </div>
