@@ -19,12 +19,12 @@ const Footer = () => {
           no-code SaaS website.
         </div>
         <div className="flex gap-4 text-2xl cursor-pointer">
-          <FaXTwitter />
-          <AiFillInstagram />
-          <FaPinterest />
-          <FaLinkedin />
-          <FaTiktok />
-          <FaYoutube />
+          <FaXTwitter className="hover:scale-125" />
+          <AiFillInstagram className="hover:scale-125" />
+          <FaPinterest className="hover:scale-125" />
+          <FaLinkedin className="hover:scale-125" />
+          <FaTiktok className="hover:scale-125" />
+          <FaYoutube className="hover:scale-125" />
         </div>
       </div>
       <div className="flex flex-col gap-4">
