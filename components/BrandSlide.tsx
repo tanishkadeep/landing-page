@@ -11,8 +11,8 @@ import { motion } from "framer-motion";
 
 const BrandSlide = () => {
   return (
-    <div className="py-8 bg-white px-4 md:p-12">
-      <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
+    <div className="pt-8 bg-white px-4 md:p-12 flex justify-center">
+      <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)] w-[1200px]">
         <motion.div
           className="flex gap-14 flex-none items-center justify-center pr-14"
           animate={{
