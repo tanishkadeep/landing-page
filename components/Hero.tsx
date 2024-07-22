@@ -2,16 +2,25 @@
 
 import { FaArrowRight } from "react-icons/fa";
 import Button from "./Button";
-import Image from "next/image";
 import HeroImage from "@/public/assests/Visual.png";
 import Cylinder from "@/public/assests/cylinder.png";
 import HalfTorus from "@/public/assests/half-torus.png";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 const Hero = () => {
-  
+  const heroRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start end", "end start"],
+  });
+
+  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+
   return (
     <section
+      ref={heroRef}
       className="p-8 pb-16 md:p-10 lg:p-20 font-medium bg-gradient-to-tr from-[#001E80] via-[#e4eaff]  overflow-x-clip md:items-center gap-3"
     >
       <div className="md:flex items-center justify-center gap-16">
@@ -37,11 +46,13 @@ const Hero = () => {
         </div>
 
         <div className="pt-12 md:pt-0 md:h-[648px] md:w-[648px] relative">
-          <Image
-            src={Cylinder}
+          <motion.img
+            src={Cylinder.src}
             alt="Cylinder"
             className=" hidden md:block md:absolute -left-8 -top-8"
-           
+            style={{
+              translateY: translateY,
+            }}
           />
           <motion.img
             src={HeroImage.src}
@@ -57,11 +68,13 @@ const Hero = () => {
               ease: "easeInOut",
             }}
           />
-          <Image
-            src={HalfTorus}
+          <motion.img
+            src={HalfTorus.src}
             alt="HalfTorus"
             className=" hidden lg:block md:absolute left-[400px] top-[500px]"
-          
+            style={{
+              translateY: translateY,
+            }}
           />
         </div>
       </div>

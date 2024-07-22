@@ -1,15 +1,31 @@
+"use client";
+
 import ProductImage from "@/public/assests/Product Image.png";
 import Pyramid from "@/public/assests/pyramid.png";
 import Tube from "@/public/assests/tube.png";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import { useRef } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { GoBell, GoGoal } from "react-icons/go";
 import { LuLeaf } from "react-icons/lu";
 import { MdLockOutline } from "react-icons/md";
 
 const ProductShowcase = () => {
+  const sectionRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+
   return (
-    <div className="bg-gradient-to-t from-[#acbae8] to-white flex flex-col items-center overflow-x-hidden pb-24">
+    <div
+      ref={sectionRef}
+      className="bg-gradient-to-t from-[#acbae8] to-white flex flex-col items-center overflow-x-hidden pb-24"
+    >
       <div className="flex flex-col items-center font-medium mt-24 px-8 mx-auto md:w-[550px] lg:w-[630px]">
         <div className="border-2 w-fit p-0.5 px-3 text-sm rounded-xl border-slate-300/80">
           Boost your productivity
@@ -25,16 +41,22 @@ const ProductShowcase = () => {
         </div>
       </div>
       <div className="relative ">
-        <Image
-          src={Pyramid}
+        <motion.img
+          src={Pyramid.src}
           alt="Pyramid Image"
           className="absolute -right-24 -top-20 w-72 h-72 hidden md:block"
+          style={{
+            translateY: translateY,
+          }}
         />
         <Image src={ProductImage} alt="Product Image" className="px-1" />
-        <Image
-          src={Tube}
+        <motion.img
+          src={Tube.src}
           alt="Tube Image"
           className="absolute w-72 h-72 top-64 -left-28 hidden md:block"
+          style={{
+            translateY: translateY,
+          }}
         />
       </div>
 
