@@ -8,6 +8,7 @@ import {
   FaYoutube,
 } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
+import { MdOutlineArrowOutward } from "react-icons/md";
 
 const Footer = () => {
   return (
@@ -15,8 +16,12 @@ const Footer = () => {
       <div className="flex flex-col gap-8 text-gray-300/85 max-w-[300px]">
         <Image src={Logo} alt="Logo" className="cursor-pointer" />
         <div>
-          Effortlessly turn your ideas into a fully functional, responsive,
-          no-code SaaS website.
+          This website is developed by{" "}
+          <div className="font-semibold text-white hover:underline text-lg">
+            <a href="https://github.com/tanishkadeep">
+              Tanishka Deep <MdOutlineArrowOutward className="inline" />
+            </a>
+          </div>
         </div>
         <div className="flex gap-4 text-2xl cursor-pointer">
           <FaXTwitter className="hover:scale-125" />
