@@ -1,22 +1,44 @@
+"use client";
+
 import { FaArrowRight } from "react-icons/fa";
 import Button from "./Button";
 import Star from "@/public/assests/emojistar 1.png";
 import Helix from "@/public/assests/helix2 1.png";
 import Image from "next/image";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const CTA = () => {
+  const sectionRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+
   return (
-    <div className="flex flex-col items-center pt-16 pb-24 px-14 bg-gradient-to-t from-[#afbbe4] to-white  overflow-x-clip">
+    <div
+      ref={sectionRef}
+      className="flex flex-col items-center pt-16 pb-24 px-14 bg-gradient-to-t from-[#afbbe4] to-white  overflow-x-clip"
+    >
       <div className="max-w-[570px] flex flex-col items-center relative">
-        <Image
-          src={Star}
+        <motion.img
+          src={Star.src}
           alt="Star"
-          className="absolute -left-80 -top-24 pr-6 hidden md:block"
+          className="absolute -left-[345px] -top-28 pr-6 hidden md:block"
+          style={{
+            translateY: translateY,
+          }}
         />
-        <Image
-          src={Helix}
+        <motion.img
+          src={Helix.src}
           alt="Helix"
           className="absolute -right-80 -top-6 hidden md:block"
+          style={{
+            translateY: translateY,
+          }}
         />
         <div className="text-4xl md:text-5xl lg:text-6xl py-6 font-bold tracking-tighter text-center bg-gradient-to-b from-black to-[#002499] text-transparent bg-clip-text">
           Sign up for free today
